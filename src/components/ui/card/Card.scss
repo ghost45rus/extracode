@@ -1,0 +1,22 @@
+.mdlCard__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  background-color: $cardTitleBackgroundColor;
+  h2{
+    color: rgb(0, 0, 0);
+  }
+  &_centered{
+    justify-content: center;
+  }
+}
+.mdlCardContainer{
+  width: 100%;
+  min-height: 50px !important;
+  overflow: visible !important;
+}
+.overflowVisible{
+  overflow: visible !important;
+}

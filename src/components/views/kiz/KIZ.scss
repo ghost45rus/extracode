@@ -1,0 +1,202 @@
+.card_row{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.card_column{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 5px 10px 10px 10px;
+}
+.kiz{
+  &_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_input{
+      width: 100%;
+    }
+    &_message{
+      font-size: 20px;
+    }
+  }
+  &_card{
+    &_header{
+      display: flex;
+      background: #F0F0F0FF;
+      align-items: center;
+      padding-top: 8px;
+      padding-bottom: 6px;
+      h2{
+        line-height: 2;
+        span{
+          margin: 0
+        }
+      }
+      &_separator{
+        .container{
+          display: flex;
+          border: none;
+          justify-content: center;
+          align-items: center;
+          width: 22px;
+          height: 22px;
+          padding: 0 10px 0 16px;
+        }
+      }
+      &_status{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        padding: 5px 15px;
+        .container{
+          width: 15px;
+          height: 20px;
+        }
+      }
+
+    }
+    &_body{
+      display: flex;
+      padding: 0 10px;
+      flex-direction: column;
+      &_item{
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        &:first-child{
+          margin-top: 10px;
+        }
+        &:last-child{
+          margin-bottom: 20px;
+        }
+      }
+      &_input{
+        padding-top: 8px;
+        padding-bottom: 6px;
+        width: calc(100% - 10px);
+      }
+      &_hierarchy{
+        &_container{
+          p{
+            color: black;
+            margin: 0;
+            width: 100%;
+            font-size: 16px;
+            display: inline-flex;
+            gap: 10px;
+          }
+          span{
+            .container{
+              border: none;
+              opacity: .7;
+            }
+            &:nth-child(1){
+              min-width: 20px;
+              max-width: 20px;
+              height: 22px;
+              display: inline-block;
+            }
+            &:nth-child(2){
+              min-width: 35px;
+              display: inline-block;
+            }
+            &:nth-child(3){
+              flex-basis: 180px;
+              display: inline-block;
+            }
+            &:nth-child(4){
+              color: $mainTextColor;
+              display: inline-block;
+            & > * {
+              margin: 0;
+              display: inline-block;
+              max-width: 100%;
+            }
+            }
+          }
+          &_link{
+            text-align: center;
+            text-decoration: underline;
+            cursor: pointer;
+            color: $mainTextColor !important;
+          }
+        }
+      }
+      &_lastDocument{
+        box-sizing: border-box;
+        h5{
+          margin: 0;
+        }
+        &_container{
+          display: flex;
+          align-items: center;
+          &_documentId{
+            text-decoration: underline;
+            color: $mainTextColor;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          &_documentStatus{
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+  &_modal{
+    &_container{
+      padding: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      p{
+        margin: 0;
+        font-size: 16px;
+        display: flex;
+        gap: 10px;
+        padding: 0 5px;
+        color: black;
+      }
+      span{
+        .container{
+          border: none;
+          opacity: .7;
+        }
+        &:nth-child(1){
+          min-width: 20px;
+          max-width: 20px;
+          display: inline-block;
+        }
+        &:nth-child(2){
+          display: inline-block;
+        }
+        &:nth-child(3){
+          p{
+            color: $mainTextColor;
+            display: inline-block;
+            & > * {
+              margin: 0;
+              display: inline-block;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+      &_link{
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+        color: $mainTextColor
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 320px;
+  margin: 0 auto;
+  .mdl-card__title{
+    justify-content: center;
+  }
+}
+.version-info{
+  text-align: right;
+}
+.button_login{
+  width: 100%;
+}

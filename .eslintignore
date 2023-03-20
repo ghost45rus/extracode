@@ -1,0 +1,6 @@
+src/components/**/*.vue
+src/assets/js/*.js
+src/store/**/*.js
+src/store/modules/*.js
+src/store/modules/auth.module.js
+src/store/*.js

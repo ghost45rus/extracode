@@ -1,0 +1,22 @@
+.mdl-grid{
+  &-filters{
+  }
+}
+.grid{
+  &_card{
+    margin: 20px 50px 0 80px;
+  }
+}
+
+.title_card{
+  span{
+    font-size: 24px;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  font-size: 16px;
+  background-color: rgb(240, 240, 240);
+}

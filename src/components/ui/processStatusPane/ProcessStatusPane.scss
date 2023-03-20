@@ -1,0 +1,87 @@
+.process_status{
+  min-width: 300px;
+  margin: 0 40px;
+  box-sizing: border-box;
+  &_grid{
+    min-width: 250px;
+    max-width: 750px;
+    text-align: center;
+    position: relative;
+    display: grid;
+    column-gap: 100px;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-areas:
+      "T T T"
+      "C C C"
+      "L L L";
+    &_4{
+      grid-template-columns: repeat(4, 50px);
+      grid-template-areas:
+      "T T T T"
+      "C C C C"
+      "L L L L";
+    }
+    &_2{
+      grid-template-columns: repeat(2, 50px);
+      grid-template-areas:
+      "T T"
+      "C C"
+      "L L";
+      column-gap: 200px;
+    }
+    hr{
+      position: absolute;
+      width: 100%;
+      bottom: 5.5%;
+      z-index: -2;
+      border: 7px dotted;
+      border-style: none none dotted;
+      color: $accentTextColor;
+    }
+    &_text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+    }
+    &_circle{
+      border-radius: 50%;
+      border: 1px solid $mainTextColor;
+      position: relative;
+      background: #fff;
+      &:before{
+        display: block; /* отображать элемент как блок */
+        content: ""; /* содержимое псевдоэлемента */
+        width: 100%; /* ширина элемента */
+      }
+      &_content{
+        position: absolute; /* абсолютное положение элемент */
+        /* положение элемента */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        &_icon{
+          font-size: 24px;
+          color: $mainTextColor;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          &_colored_green{
+            color: rgba(6, 192, 0, 0.8);
+          }
+          &_colored_red{
+            color: rgba(255, 0, 0, 0.8);
+          }
+          &_colored_yellow{
+            color: rgb(255, 216, 56, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+.item-1by1 {
+  padding-top: 100%;
+}

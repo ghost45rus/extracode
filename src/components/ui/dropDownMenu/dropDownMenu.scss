@@ -1,0 +1,70 @@
+.dropdown {
+  position: relative;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  cursor: pointer;
+  &_content {
+    background-color: rgb(226, 226, 226) !important;
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 1s;
+    opacity: 0;
+    z-index: 1;
+    a{
+      display: block;
+      &:hover{
+        background-color: rgb(168, 168, 168) !important;
+        color: #ffffff !important;
+      }
+      .router-link-active{
+        background-color: rgb(168, 168, 168) !important;
+      }
+    }
+  }
+}
+
+.dropdown_input {
+  position: relative;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  cursor: pointer;
+  overflow: visible !important;
+  &_content {
+    background-color: rgb(255, 255, 255) !important;
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    min-width: 160px;
+    max-height: 160px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 55px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: 1s;
+    opacity: 0;
+    z-index: 1;
+    div{
+      padding: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      display: block;
+      background-color: rgb(255, 255, 255) !important;
+      &:hover{
+        background-color: rgb(168, 168, 168) !important;
+        color: #ffffff !important;
+      }
+      .router-link-active{
+        background-color: rgb(168, 168, 168) !important;
+      }
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  display:block;
+  width: 100%;
+}

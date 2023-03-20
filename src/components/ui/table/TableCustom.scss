@@ -1,0 +1,200 @@
+.mdl{
+  &_table{
+    max-width: 100%;
+    overflow-x: scroll;
+    &_footer{
+      align-items: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      &_item{
+        margin: 0 5px;
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+    &_paggination{
+      display: flex;
+      justify-content: center;
+      &_cell{
+        &:hover{
+          cursor: pointer;
+          color: white;
+          background-color: $accentTextColor;
+        }
+        color: $mainTextColor;
+        margin: 0 5px;
+        border: 1px solid rgba(0,0,0,.12);
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        min-width: 50px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        &_active{
+          background-color: $mainTextColor;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.subtitle_td{
+  width: 30px !important;
+}
+
+.resp{
+  min-height: 300px;
+  &-tab{
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 13px;
+    font-weight: 300 !important;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    &_tr{
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: 0.5s linear;
+      &_no_pointer{
+        cursor: inherit !important;
+      }
+      &_hover{
+        &_pointer{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        &:hover{
+          background-color: #e0e0e0 !important;
+        }
+      }
+      &_text_align_left{
+        text-align: left !important;
+      }
+      &_text_align_right{
+        text-align: right !important;
+      }
+      &_text_align_center{
+        text-align: center !important;
+      }
+    }
+    &_cell{
+      min-width: 40px;
+      white-space: pre-wrap !important;
+      padding: 5px 10px;
+      vertical-align: center;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      &_header_content{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        &_text{
+          width: calc(90% - 5px);
+          margin-right: 5px;
+        }
+        &_icons{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: calc(10% - 5px);
+          .container{
+            width: 5px;
+            height: 5px;
+            border: none;
+          }
+          svg{
+            cursor: pointer;
+            width: 10px !important;
+            height: 10px !important;
+          }
+        }
+      }
+
+      &_link{
+        display: flex;
+        cursor: pointer;
+        color: $mainTextColor;
+        text-decoration: underline
+      }
+      &:nth-child(2){
+          border-left: 0 !important;
+      }
+      a{
+        color: $mainTextColor;
+      }
+    }
+    &_cell_first{
+      color: $mainTextColor !important;
+      i{
+        transition: 0.1s linear;
+      }
+      &:hover{
+        i{
+          color: $accentTextColor;
+        }
+        cursor: pointer;
+      }
+      text-align: center;
+    }
+  }
+  th{
+    color: $mainTextColor !important;
+  }
+}
+
+.fixedHead{
+  overflow: auto; height: 100%;
+  thead th {
+    position: sticky; top: 0; z-index: 1;
+    background: #fff;
+  }
+}
+
+.hidden_table{
+  display: none;
+}
+.loading {
+  span {
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(to right, #eee 0%, #ddd 50%, #eee 100%);
+    background-size: 100% 100px;
+    animation-name: moving-gradient;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+}
+.col_number{
+  width: 5%;
+}
+.row_color{
+  &_red{
+    background-color: $redPastel !important;
+  }
+  &_green{
+    background-color: $greenPastel !important;
+  }
+  &_gray{
+    background-color: $greyPastel !important;
+  }
+  &_yellow{
+    background-color: $yellowPastel !important;
+  }
+}
+a.link-to-card{
+  color: $mainTextColor
+}
+@keyframes moving-gradient {
+  0% { background-position: -150px 0; }
+  50% { background-position: 0 0; }
+  100% { background-position: 150px 0; }
+}

@@ -1,0 +1,5 @@
+@import "variables";
+$namespace: 'xmx';
+$default-color: $mainTextColor;
+$primary-color: $accentTextColor;
+@import '~vue-datepicker-next/scss/index.scss';

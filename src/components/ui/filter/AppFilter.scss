@@ -1,0 +1,57 @@
+.row {
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0 -5px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filters_column{
+  display: block;
+  max-width: calc(25% - 20px) !important;
+  box-sizing: border-box !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  min-width: calc(25% - 20px) !important;
+}
+.xmx-datepicker{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 1500px) {
+  .filters_column{
+    max-width: calc(33% - 20px) !important;
+    min-width: calc(33% - 20px) !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .filters_column{
+    max-width: calc(33% - 20px) !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+  .xmx-datepicker {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1060px) {
+  .row{
+    gap: 5px;
+  }
+  .filters_column {
+    max-width: calc(50% - 20px) !important;
+    min-width: calc(50% - 20px) !important;
+  }
+}
+
+@media (max-width: 810px) {
+  .filters_column{
+    max-width: calc(100% - 20px) !important;
+    min-width: calc(100% - 20px) !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}

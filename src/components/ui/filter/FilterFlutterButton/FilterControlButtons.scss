@@ -1,0 +1,51 @@
+.filters_buttons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.filterFlutterButton{
+  display: flex;
+  justify-content: center;
+  min-width: auto;
+  width: 25px;
+  .container{
+    border: none;
+    margin-right: 0;
+  }
+}
+.line{
+  display: flex;
+  align-items: center
+}
+p{
+  margin: 0;
+  width: 250px;
+  box-sizing: border-box;
+}
+label{
+  span{
+    height: 12px;
+    width: 12px;
+    border: 1px solid $mainTextColor;
+    display: inline-block;
+    position: relative;
+    background-color:#FFF;
+    border-radius: 2px;
+    padding: 3px;
+  }
+  input{
+    display: none;
+
+  }
+}
+.input_cheсked{
+  background: $mainTextColor;
+  &:before{
+    content: '\2714';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    font-size: 20px;
+    color: white;
+  }
+}

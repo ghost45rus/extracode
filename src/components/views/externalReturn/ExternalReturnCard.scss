@@ -1,0 +1,43 @@
+.grid_card_span{
+  color: rgba(0,0,0,.87);
+}
+.grid_card-body_card{
+  margin: 20px 10px;
+}
+.card_row{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.card_column{
+  display: flex;
+  flex-direction: column;
+}
+.mdlTextfield{
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+.button{
+  height: 22px;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 16px;
+  font-size: 12px;
+  .container{
+    border: none;
+  }
+}
+.title_card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  font-size: 16px;
+  background-color: rgb(240, 240, 240);
+}
+.pushedNone{
+  opacity: 0.5;
+}

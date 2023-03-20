@@ -1,0 +1,23 @@
+a{
+  color: white;
+  text-decoration: none;
+}
+.mdl_layout_сhapter{
+  margin-left: 100px;
+}
+.mdlNavigtaionPersonalAccount{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &__icon{
+    margin-right: 10px;
+  }
+  &__data{
+    margin-right: 10px;
+  }
+}
+.bar {
+  position: relative;
+  background: inherit;
+  color: white;
+}

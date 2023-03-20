@@ -1,0 +1,76 @@
+# This file is a template, and might need editing before it works on your project.
+# This is a sample GitLab CI/CD configuration file that should run without any modifications.
+# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
+# it uses echo commands to simulate the pipeline execution.
+#
+# A pipeline is composed of independent jobs that run scripts, grouped into stages.
+# Stages run in sequential order, but jobs within stages run in parallel.
+#
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/README.html#stages
+
+image: nikolaik/python-nodejs:python3.10-nodejs18
+
+variables:
+  APP_FILES_PATH: "/var/www/html/markex"
+  APP_FILES_PATH_T2: "/var/www/html/markex_two"
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+build to Exmark:       # This job runs in the build stage, which runs first.
+  when: manual
+  stage: build
+  script:
+    - cd /builds/markex/frontend
+    - npm install --save --legacy-peer-deps
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 hour
+
+build to UAT:       # This job runs in the build stage, which runs first.
+  when: manual
+  stage: build
+  script:
+    - cd /builds/markex/frontend
+    - npm install --save --legacy-peer-deps
+    - npm run buildUAT
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 hour
+
+Deploy to test:
+  when: manual
+  stage: deploy
+  needs:
+    - build to Exmark
+  script:
+    - rm -rf $APP_FILES_PATH/*
+    - cp -r $CI_PROJECT_DIR/dist/. $APP_FILES_PATH
+  tags:
+    - app05-shell-runner
+
+Deploy to test2:
+  when: manual
+  stage: deploy
+  needs:
+    - build to Exmark
+  script:
+    - rm -rf $APP_FILES_PATH_T2/*
+    - cp -r $CI_PROJECT_DIR/dist/. $APP_FILES_PATH_T2
+  tags:
+    - app05-shell-runner
+
+Deploy to UAT:
+  when: manual
+  stage: deploy
+  needs:
+    - build to UAT
+  script:
+    - rm -rf $APP_FILES_PATH/*
+    - cp -r $CI_PROJECT_DIR/dist/. $APP_FILES_PATH
+  tags:
+    - demo05-shell-runner
